@@ -3,7 +3,7 @@ function getData(){
     $.get("https://api.coingecko.com/api/v3/coins/list",function f(data){
         let i 
         for(i=0;i<10;i++){
-            $("#cards").append(
+            $("#cards").append(`
                 <div class="card displayin">
                  <div class="card-body">
                    <h5 class="card-title">${data[i].name}</h5>
@@ -11,7 +11,7 @@ function getData(){
                    <p class="card-text">${data[i].symbol}</p>
                  </div>
                 </div>
-            ).html()
+            `)
             console.log(data[i])
         }
     })
